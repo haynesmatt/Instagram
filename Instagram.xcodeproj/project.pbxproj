@@ -11,6 +11,7 @@
 		917D188827DAD20000F14B78 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917D188727DAD20000F14B78 /* loginViewController.swift */; };
 		917D188A27DAD20C00F14B78 /* feedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917D188927DAD20C00F14B78 /* feedViewController.swift */; };
 		917D188C27DAEF6700F14B78 /* cameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917D188B27DAEF6700F14B78 /* cameraViewController.swift */; };
+		917D188E27DB081700F14B78 /* postCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 917D188D27DB081700F14B78 /* postCell.swift */; };
 		91E563AC27D86F6A0001661E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E563AB27D86F6A0001661E /* AppDelegate.swift */; };
 		91E563AE27D86F6A0001661E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E563AD27D86F6A0001661E /* SceneDelegate.swift */; };
 		91E563B327D86F6A0001661E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91E563B127D86F6A0001661E /* Main.storyboard */; };
@@ -49,6 +50,7 @@
 		917D188727DAD20000F14B78 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		917D188927DAD20C00F14B78 /* feedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = feedViewController.swift; sourceTree = "<group>"; };
 		917D188B27DAEF6700F14B78 /* cameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = cameraViewController.swift; sourceTree = "<group>"; };
+		917D188D27DB081700F14B78 /* postCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = postCell.swift; sourceTree = "<group>"; };
 		91E563A827D86F6A0001661E /* Instagram.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Instagram.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		91E563AB27D86F6A0001661E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		91E563AD27D86F6A0001661E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +141,7 @@
 				917D188727DAD20000F14B78 /* loginViewController.swift */,
 				917D188927DAD20C00F14B78 /* feedViewController.swift */,
 				917D188B27DAEF6700F14B78 /* cameraViewController.swift */,
+				917D188D27DB081700F14B78 /* postCell.swift */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91E563AC27D86F6A0001661E /* AppDelegate.swift in Sources */,
+				917D188E27DB081700F14B78 /* postCell.swift in Sources */,
 				91E563AE27D86F6A0001661E /* SceneDelegate.swift in Sources */,
 				917D188C27DAEF6700F14B78 /* cameraViewController.swift in Sources */,
 				917D188A27DAD20C00F14B78 /* feedViewController.swift in Sources */,
