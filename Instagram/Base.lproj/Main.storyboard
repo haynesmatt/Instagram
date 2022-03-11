@@ -28,11 +28,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h6D-3S-dn8">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h6D-3S-dn8">
                                 <rect key="frame" x="40" y="412" width="334" height="34"/>
                                 <color key="backgroundColor" systemColor="quaternarySystemFillColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <nil key="textColor"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vz-oW-Ve3">
                                 <rect key="frame" x="40" y="455" width="334" height="32"/>
@@ -88,7 +88,7 @@
                     <connections>
                         <outlet property="passwordField" destination="h6D-3S-dn8" id="9D3-5l-b8L"/>
                         <outlet property="usernameField" destination="yfq-Qi-acl" id="zx9-xV-k1i"/>
-                        <segue destination="8lX-EF-10l" kind="presentation" id="Eqd-1T-Hcc"/>
+                        <segue destination="8lX-EF-10l" kind="presentation" identifier="loginSegue" modalPresentationStyle="fullScreen" id="Eqd-1T-Hcc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -100,7 +100,7 @@
             <objects>
                 <viewController title="feedViewController" id="YUy-iU-p4A" customClass="feedViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="c32-Ur-jEp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="Mus-Rz-orF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -117,7 +117,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="8lX-EF-10l" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="kOl-Dn-hd4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
