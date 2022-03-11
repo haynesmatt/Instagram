@@ -32,6 +32,7 @@
                                 <rect key="frame" x="40" y="412" width="334" height="34"/>
                                 <color key="backgroundColor" systemColor="quaternarySystemFillColor"/>
                                 <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Vz-oW-Ve3">
@@ -131,7 +132,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MkG-IV-W7i">
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image_placeholder" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MkG-IV-W7i">
                                 <rect key="frame" x="25" y="66" width="364" height="340"/>
                                 <gestureRecognizers/>
                                 <constraints>
@@ -142,9 +143,8 @@
                                     <outletCollection property="gestureRecognizers" destination="dBW-pr-T2S" appends="YES" id="Dt8-en-His"/>
                                 </connections>
                             </imageView>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a caption..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ub4-zt-hbd">
-                                <rect key="frame" x="25" y="430" width="364" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write a caption..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ub4-zt-hbd">
+                                <rect key="frame" x="25" y="430" width="364" height="68"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
@@ -152,8 +152,12 @@
                         <viewLayoutGuide key="safeArea" id="tfO-dy-U9b"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="tfO-dy-U9b" firstAttribute="bottom" secondItem="ub4-zt-hbd" secondAttribute="bottom" constant="344" id="5u2-QY-fcR"/>
+                            <constraint firstItem="ub4-zt-hbd" firstAttribute="leading" secondItem="tfO-dy-U9b" secondAttribute="leading" constant="25" id="6Ej-R7-grY"/>
+                            <constraint firstItem="tfO-dy-U9b" firstAttribute="trailing" secondItem="ub4-zt-hbd" secondAttribute="trailing" constant="25" id="89v-25-3mV"/>
                             <constraint firstItem="MkG-IV-W7i" firstAttribute="leading" secondItem="tfO-dy-U9b" secondAttribute="leading" constant="25" id="AlR-ry-3Xj"/>
                             <constraint firstItem="MkG-IV-W7i" firstAttribute="top" secondItem="tfO-dy-U9b" secondAttribute="top" constant="10" id="kBG-dE-uIM"/>
+                            <constraint firstItem="ub4-zt-hbd" firstAttribute="top" secondItem="MkG-IV-W7i" secondAttribute="bottom" constant="24" id="qMz-xb-gny"/>
                             <constraint firstItem="tfO-dy-U9b" firstAttribute="trailing" secondItem="MkG-IV-W7i" secondAttribute="trailing" constant="25" id="zeI-i6-eKo"/>
                         </constraints>
                     </view>
