@@ -11,7 +11,7 @@
         <!--loginViewController-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController title="loginViewController" id="BYZ-38-t0r" customClass="loginViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="loginViewController" title="loginViewController" id="BYZ-38-t0r" customClass="loginViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -220,12 +220,20 @@
                             <inset key="largeContentSizeImageInsets" minX="1" minY="1" maxX="0.0" maxY="0.0"/>
                             <color key="tintColor" systemColor="labelColor"/>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="New Post" image="insta_camera_btn" style="plain" id="5S1-1y-SqZ">
-                            <color key="tintColor" systemColor="labelColor"/>
-                            <connections>
-                                <segue destination="QlQ-r3-qzu" kind="presentation" id="p38-pf-gKr"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem title="Logout" image="rectangle.portrait.and.arrow.right" catalog="system" id="PPu-9Q-n8C">
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <connections>
+                                    <action selector="logOut:" destination="YUy-iU-p4A" id="AKP-IR-cU3"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem title="New Post" image="insta_camera_btn" style="plain" id="5S1-1y-SqZ">
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <connections>
+                                    <segue destination="QlQ-r3-qzu" kind="presentation" id="p38-pf-gKr"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="uqA-ma-LBw" id="Auq-Q3-JYl"/>
@@ -337,6 +345,7 @@
         <image name="insta_camera_btn" width="25" height="25"/>
         <image name="instagram_logo" width="255" height="108"/>
         <image name="message" catalog="system" width="128" height="113"/>
+        <image name="rectangle.portrait.and.arrow.right" catalog="system" width="128" height="108"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
