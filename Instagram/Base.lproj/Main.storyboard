@@ -107,7 +107,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="uqA-ma-LBw">
                                 <rect key="frame" x="0.0" y="88" width="428" height="838"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="postCell" rowHeight="529" id="OgB-IA-RJt" customClass="postCell" customModule="Instagram" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="0.0" reuseIdentifier="postCell" rowHeight="529" id="OgB-IA-RJt" customClass="postCell" customModule="Instagram" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="529"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OgB-IA-RJt" id="DpF-BC-Wby">
@@ -200,7 +200,7 @@
                                             <outlet property="usernameLabel1" destination="cq3-Fm-Bla" id="ZdV-EU-rgM"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="commentCell" id="Bwq-Ob-fhY" customClass="commentCell" customModule="Instagram" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="commentCell" id="Bwq-Ob-fhY" customClass="commentCell" customModule="Instagram" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="573.66666603088379" width="428" height="25"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Bwq-Ob-fhY" id="9B1-l9-Qca">
@@ -232,6 +232,27 @@
                                             <outlet property="commentLabel" destination="NoB-Wm-8X1" id="dFY-UU-DXJ"/>
                                             <outlet property="usernameLabel" destination="lql-5v-lJd" id="RFd-n2-tb5"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="AddCommentCell" rowHeight="31" id="5hX-Bs-f6d" customClass="AddCommentCell">
+                                        <rect key="frame" x="0.0" y="598.66666603088379" width="428" height="31"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5hX-Bs-f6d" id="n1G-yo-uMv">
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="31"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Add a comment..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g6T-tt-9Ns">
+                                                    <rect key="frame" x="16" y="7" width="134" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" systemColor="systemGray2Color"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="g6T-tt-9Ns" firstAttribute="bottom" secondItem="n1G-yo-uMv" secondAttribute="bottomMargin" constant="8" id="4Ph-Fp-uB3"/>
+                                                <constraint firstItem="g6T-tt-9Ns" firstAttribute="top" secondItem="n1G-yo-uMv" secondAttribute="topMargin" constant="-4" id="JNb-p4-Plo"/>
+                                                <constraint firstItem="g6T-tt-9Ns" firstAttribute="leading" secondItem="n1G-yo-uMv" secondAttribute="leadingMargin" constant="-4" id="KMU-zC-6C0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -385,6 +406,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
