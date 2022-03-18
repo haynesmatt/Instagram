@@ -13,9 +13,9 @@ import MessageInputBar
 class feedViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, MessageInputBarDelegate  {
 
     @IBOutlet weak var tableView: UITableView!
+    
     let commentBar = MessageInputBar()
     var showCommentBar = false
-    
     var posts = [PFObject]()
     var selectedPost: PFObject!
     
@@ -82,7 +82,6 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         comment["author"] = PFUser.current()!
 
         selectedPost.add(comment, forKey: "Comments")
-
         selectedPost.saveInBackground { (success, error) in
             if success {
                 print("Comment saved")
@@ -116,21 +115,21 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
         
         if indexPath.row == 0 {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "postCell") as! postCell
-        
-        let user = post["author"] as! PFUser
-        cell.usernameLabel.text = user.username
-        cell.usernameLabel1.text = user.username
-        
-        cell.captionLabel.text = post["caption"] as! String
-        
-        let imageFile = post["image"] as! PFFileObject
-        let urlString = imageFile.url!
-        let url = URL(string: urlString)!
-        
-        cell.photoView.af_setImage(withURL: url)
-        
-        return cell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "postCell") as! postCell
+            
+            let user = post["author"] as! PFUser
+            cell.usernameLabel.text = user.username
+            cell.usernameLabel1.text = user.username
+            
+            cell.captionLabel.text = post["caption"] as? String
+            
+            let imageFile = post["image"] as! PFFileObject
+            let urlString = imageFile.url!
+            let url = URL(string: urlString)!
+            
+            cell.photoView.af_setImage(withURL: url)
+            
+            return cell
             
         } else if indexPath.row <= comments.count {
             let cell = tableView.dequeueReusableCell(withIdentifier: "commentCell") as! commentCell
