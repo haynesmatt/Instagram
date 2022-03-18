@@ -17,6 +17,7 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     var showCommentBar = false
     
     var posts = [PFObject]()
+    var selectedPost: PFObject!
     
     @IBAction func logOut(_ sender: Any) {
         PFUser.logOut()
@@ -74,6 +75,24 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     
     func messageInputBar(_ inputBar: MessageInputBar, didPressSendButtonWith text: String) {
+        
+        let comment = PFObject(className: "Comments")
+        comment["text"] = text
+        comment["post"] = selectedPost
+        comment["author"] = PFUser.current()!
+
+        selectedPost.add(comment, forKey: "Comments")
+
+        selectedPost.saveInBackground { (success, error) in
+            if success {
+                print("Comment saved")
+            } else {
+                print("Error saving comment")
+            }
+        }
+        
+        tableView.reloadData()
+        
         commentBar.inputTextView.text = nil
          
         showCommentBar = false
@@ -137,22 +156,9 @@ class feedViewController: UIViewController, UITableViewDelegate, UITableViewData
             showCommentBar = true
             becomeFirstResponder()
             commentBar.inputTextView.becomeFirstResponder()
+            
+            selectedPost = post
         }
-        
-//        comment["text"] = "This is a random comment"
-//        comment["post"] = post
-//        comment["author"] = PFUser.current()!
-//
-//        post.add(comment, forKey: "Comments")
-//
-//        post.saveInBackground { (success, error) in
-//            if success {
-//                print("Comment saved")
-//            } else {
-//                print("Error saving comment")
-//            }
-//        }
-//
     }
     
     
